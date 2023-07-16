@@ -25,7 +25,11 @@ struct ContentView: View {
         VStack(spacing: 30) {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(lineWidth: 5)
-                .background(Color(red: redSliderValue / 255, green: greenSliderValue / 255, blue: blueSliderValue / 255))
+                .background(Color(
+                    red: redSliderValue / 255,
+                    green: greenSliderValue / 255,
+                    blue: blueSliderValue / 255)
+                )
                 .cornerRadius(20)
                 .frame(height: 150)
             
@@ -108,8 +112,8 @@ struct ContentView: View {
 struct ColorSliderView: View {
     @Binding var value: Double
     @Binding var inputValue: String
-    var focusColor: FocusState<Color?>.Binding
     
+    var focusColor: FocusState<Color?>.Binding
     let textColor: Color
     
     var body: some View {
