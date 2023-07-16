@@ -67,10 +67,6 @@ struct ContentView: View {
         }
     }
     
-    private func currentInputValue() {
-        
-    }
-    
     private func submitColor() {
         withAnimation {
             if let inputValue = isColorValue(blueInputValue), focusedField == .blue {
